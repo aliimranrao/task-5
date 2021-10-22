@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+
+</head>
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<body style="text-align: center;">
+    <label>Enter Year</label>
+    <br>
+    <input type="number" id="year">
+    <p id="result" style="font-size: 14px;"></p>
+    <button onclick="Check()">Check Leap Year</button>
+    <script>
+        function Check(){
+            let leapYear = document.getElementById('year').value;
+        let isLeapYear = leapYear % 100 === 0 ? leapYear % 400 === 0 : leapYear % 4 === 0;
+        let message = isLeapYear ? document.getElementById('result').innerHTML=`${leapYear} is a leap year` : document.getElementById('result').innerHTML=`${leapYear} is a gregorian year`;
+        }
+        
+    </script>
+</body>
+
+</html>
